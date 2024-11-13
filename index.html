@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação Dólar-Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cotação Dólar e Real</h2>
+        
+        <div class="form-group">
+            <label for="amount">Valor:</label>
+            <input type="number" id="amount" placeholder="Insira o valor" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="conversion-type">Converter de:</label>
+            <select id="conversion-type">
+                <option value="USD-BRL">Dólar para Real</option>
+                <option value="BRL-USD">Real para Dólar</option>
+            </select>
+        </div>
+
+        <button id="convert-button" onclick="convertCurrency()">Converter</button>
+
+        <div class="response-container" id="result-container" style="display: none;">
+            <p class="valor">Resultado: <span id="result"></span></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
